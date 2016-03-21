@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1458540976747
+Build-Jdk: 1.7.0_91
+Built-By: shsingh
+Bundle-Blueprint: OSGI-INF/blueprint/camelContext.xml
+Bundle-ManifestVersion: 2
+Bundle-Name: Camel-json
+Bundle-SymbolicName: com.test.Camel-json
+Bundle-Version: 0.0.1
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.osgi.service.blueprint;version="[1.0.0,2.0.0)",io.fa
+ bric8.zookeeper
+Tool: Bnd-3.0.0.201509101326

@@ -1,0 +1,5 @@
+<route id="masterTimerToPrintHeaders">
+		<from uri="master:mastertimer1:timer:Test?period=10000" />
+		<log message="mastertimer---Shailendra is running" />
+		<to uri="amq:queue:printHeaders?timeToLive=60000" />
+		<!-- </route> -->
