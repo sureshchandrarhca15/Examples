@@ -12,7 +12,7 @@
     </setHeader>
     <log message="Expiring message id: ${in.headers.MSAZ_DOCDB_DEL_DOC_ID}"/>
     <setHeader headerName="MSAZ_BLOBSTORE_PATH">
-      <jsonpath>$.messageDocumentLocation</jsonpath>
+      <jsonpath>$.messageDocumentLocation1</jsonpath>
     </setHeader>
     <log message="Expiring BlobStore path: ${in.headers.MSAZ_BLOBSTORE_PATH}"/>
   </route>
