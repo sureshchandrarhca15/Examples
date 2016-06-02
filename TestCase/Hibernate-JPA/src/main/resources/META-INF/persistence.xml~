@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<persistence-unit name="EmployeeJPA" transaction-type="JTA">
+		<jta-data-source>osgi:service/javax.sql.DataSource/(osgi.jndi.service.name=jdbc/mysqld)
+		</jta-data-source>
+		<class>entity.Employee</class>
+		<class>entity.Organisation</class>
+		<class>entity.Establishment</class>
+		<class>entity.Enterprise</class>
+		<class>entity.DataType</class>
+		<class>entity.Employee</class>
+		<class>entity.Enterprise</class>
+		<class>entity.Establishment</class>
+		<class>entity.Group</class>
+		<class>entity.GroupType</class>
+		<class>entity.OrganisationSubStatusRationale</class>
+		<class>entity.OrganisationType</class>
+		<class>entity.Stock</class>
+		<class>entity.Category</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		
+		<properties>
+			<property name="hibernate.connection.driver_class" value="org.mariadb.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1464894252858
+Build-Jdk: 1.8.0_45
+Built-By: shsingh
+Bundle-ManifestVersion: 2
+Bundle-Name: DataSource
+Bundle-SymbolicName: DataSource_Bundle
+Bundle-Version: 0.0.1
+Created-By: Apache Maven Bundle Plugin
+Export-Service: javax.sql.DataSource;osgi.jndi.service.name="jdbc/mysqld
+ "
+Import-Package: javax.sql,javax.transaction,org.apache.commons.dbcp.mana
+ ged;version="[1.4,2)",org.osgi.service.blueprint;version="[1.0.0,2.0.0)
+ "
+Import-Service: javax.transaction.TransactionManager;multiple:=false
+Tool: Bnd-1.50.0
