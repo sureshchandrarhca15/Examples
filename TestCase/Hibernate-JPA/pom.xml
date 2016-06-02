@@ -125,6 +125,7 @@
 							javax.persistence;version="[1.0.0,2.1.0]",
 							org.hibernate.proxy,
 							org.mariadb.jdbc,
+							javassist.util.proxy,
 							*
 						</Import-Package>
 						<Bundle-SymbolicName>Hibernate_JPA</Bundle-SymbolicName>
