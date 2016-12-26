@@ -26,80 +26,6 @@
 			<artifactId>camel-spring</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.jboss</groupId>
-			<artifactId>jboss-remote-naming</artifactId>
-			<version>2.0.4.Final-redhat-1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jboss</groupId>
-			<artifactId>jboss-ejb-client</artifactId>
-			<version>2.1.4.Final-redhat-1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jboss</groupId>
-			<artifactId>jboss-ejb-client</artifactId>
-			<version>2.1.4.Final-redhat-1</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.jboss</groupId>
-			<artifactId>jboss-ejb-client</artifactId>
-			<version>2.1.4.Final-redhat-1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.redhat</groupId>
-			<artifactId>jboss-client</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.jboss</groupId>
-			<artifactId>jboss-ejb-client</artifactId>
-			<version>2.1.4.Final-redhat-1</version>
-		</dependency>
-
-
-
-
-
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.framework</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<version>1.4.0.RELEASE</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jboss.xnio</groupId>
-			<artifactId>xnio-nio</artifactId>
-			<version>3.3.6.Final-redhat-1</version>
-		</dependency>
-
-
-
 
 	</dependencies>
 	<build>
@@ -113,6 +39,28 @@
 						<Import-Package>javax.jms,org.jboss.naming.remote.client,org.xnio,org.xnio.nio,org.xnio.channels,*</Import-Package>
 					</instructions>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-artifacts</id>
+						<phase>package</phase>
+						<goals>
+							<goal>attach-artifact</goal>
+						</goals>
+						<configuration>
+							<artifacts>
+								<artifact>
+									<file>target/classes/features.xml</file>
+									<type>xml</type>
+									<classifier>features</classifier>
+								</artifact>
+							</artifacts>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,0 +1,17 @@
+<features name="sample" version="1.0.0">
+	<!-- Common dependency needs to be added -->
+	<feature name="test" resolver="(obr)" version="1.0.0">
+		<bundle>mvn:org.jboss.logging/jboss-logging/3.3.0.Final-redhat-1</bundle>
+		<bundle>wrap:mvn:org.jboss.marshalling/jboss-marshalling/1.4.10.Final-redhat-3</bundle>
+		<bundle>wrap:mvn:org.jboss.marshalling/jboss-marshalling-river/1.4.10.Final-redhat-3</bundle>
+		<bundle>wrap:mvn:org.jboss.sasl/jboss-sasl/1.0.5.Final-redhat-2</bundle>
+		<bundle>wrap:mvn:org.jboss.xnio/xnio-api/3.3.6.Final-redhat-1</bundle>
+		<bundle>wrap:mvn:org.jboss.xnio/xnio-nio/3.3.6.Final-redhat-1</bundle>
+		<bundle>wrap:mvn:org.jboss/jboss-remote-naming/2.0.4.Final-redhat-1</bundle>
+		<bundle>wrap:mvn:org.jboss.remoting/jboss-remoting/4.0.18.Final-redhat-1</bundle>
+		<bundle>wrap:mvn:org.jboss/jboss-ejb-client/2.1.4.Final-redhat-1</bundle>
+		<bundle>wrap:mvn:org.jboss/jboss-transaction-spi/7.3.0.Final-redhat-1</bundle>
+		<bundle>wrap:mvn:org.apache.activemq/artemis-jms-client/1.1.0.SP16-redhat-1</bundle>
+		<bundle>mvn:com.test/Camel-AMQ-JNDI/0.0.1</bundle>
+	</feature>
+</features>
