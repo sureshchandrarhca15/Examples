@@ -19,7 +19,7 @@ Update the userName and Password in the camelContext.xml.
         
         mvn install:install-file -DgroupId=com.redhat -DartifactId=jboss-client -Dversion=1.0.0 -Dfile=/<path>/jboss-eap-7.0/bin/client/jboss-client.jar -DgeneratePom=true -Dpackaging=jar
 
-#AMQ
+#A-MQ 6.3
 
 1. COMPILING
 
