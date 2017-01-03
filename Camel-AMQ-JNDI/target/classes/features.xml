@@ -1,7 +1,0 @@
-<features name="sample"
-	version="1.0.0" >
-	<feature name="AMQ-EAP7" resolver="(obr)" version="1.0.0">
-	   <feature>activemq-camel</feature>
-		<bundle>mvn:com.test/Camel-AMQ-JNDI/0.0.1</bundle>
-	</feature>
-</features>
