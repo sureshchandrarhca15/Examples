@@ -2,6 +2,7 @@ Camel-Sjms2 example with delivery delay.
 
 1. Start AMQ 7.x/ Artemis 
 2. Run the exmaple with mvn clean install camel:run
+
 #Camel logs
 ~~~~~
 [text1) thread #2 - timer://foo] amqp-consumer                  INFO  Sending message with delay
