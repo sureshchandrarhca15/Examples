@@ -86,7 +86,7 @@ public class Simple extends HttpServlet {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-		request.setAttribute("Name",inputName+"-----Host= "+remoteHost+"-------IP"+remoteAddr+"--------OCP_Training_DEMO_.....HOSTNAme=" +hostName+"----requestURI"+requestURI);
+		request.setAttribute("Name",inputName+"-----Host= "+remoteHost+"-------IP"+remoteAddr+"--------OCP_4.3_Training_DEMO_.....HOSTNAme=" +hostName+"----requestURI"+requestURI);
 //		request.setAttribute("Module","OutPut from Jar ="+tt.getImplName()+ "Test Queue Count"+i);
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
