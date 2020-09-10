@@ -1,4 +1,3 @@
-#!/bin/sh -e
-
+#!/bin/bash
 
 echo "done Shailendra"
