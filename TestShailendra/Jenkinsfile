@@ -1,0 +1,33 @@
+pipeline {
+
+  environment { 
+    APP_NAME='hello-app'
+    DEV_NAMESPACE='hellp-app-dev'
+   }
+
+  agent { label 'oc' }
+
+  stages {
+
+  stage('Build') {
+    steps {
+      script {
+      openshift.withCluster() {
+      try {
+      
+      sh """
+        oc new-build . --docker-image=registry.redhat.io/jboss-webserver-3/webserver31-tomcat8-openshift --context-dir='TestShailendra' --name=${APP_NAME} -n ${DEV_NAMESPACE}
+      """
+      
+        }
+      catch (Exception e) {
+      println "Failed to run oc build - ${currentBuild.fullDisplayName}"
+      throw e
+      }
+      }
+    }
+  }
+ }
+
+}
+}
