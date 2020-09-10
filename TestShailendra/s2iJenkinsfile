@@ -148,6 +148,7 @@ pipeline {
       }
     }
     }
+ */
     stage('Tag Image to Dev') {
       steps {
         script {
@@ -183,7 +184,7 @@ pipeline {
       }
     }
   }
-*/
+
 
 }
 }
