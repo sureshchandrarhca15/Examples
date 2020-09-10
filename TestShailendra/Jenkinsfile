@@ -15,7 +15,7 @@ pipeline {
       openshift.withCluster() {
 	openshift.withProject(env.DEV_NAMESPACE) {
 
-	openshift.newBuild(".", "--name=${env.APP_NAME}", "--image-stream=jboss-webserver31-tomcat8-openshift", "--context-dir='TestShailendra'")
+	openshift.newBuild(".", "--name=${env.APP_NAME}", "--image-stream=jboss-webserver31-tomcat8-openshift:1.4", "--context-dir='TestShailendra'")
       }
       }
     }
