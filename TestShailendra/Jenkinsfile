@@ -21,6 +21,21 @@ pipeline {
     }
   }
  }
+ stage('Build') {
+    steps {
+      script {
+      openshift.withCluster() {
+        openshift.withProject(env.DEV_NAMESPACE) {
+	openshift.newApp("${env.APP_NAME}:latest", "--name=${env.APP_NAME}").narrow('svc').expose()
+            def dc = openshift.selector("dc", "${env.APP_NAME}")
+            while (dc.object().spec.replicas != dc.object().status.availableReplicas) {
+              sleep 10
+	  }
+          }
+        }
+      }
+    }
+    }
 
 }
 }
