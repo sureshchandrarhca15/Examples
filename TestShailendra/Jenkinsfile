@@ -1,8 +1,8 @@
 pipeline {
 
   environment { 
-    APP_NAME='hello-app'
-    DEV_NAMESPACE='hellp-app-dev'
+    APP_NAME='hello-world'
+    DEV_NAMESPACE='hello-world-dev'
    }
 
   agent { label 'oc' }
