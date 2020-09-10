@@ -13,16 +13,9 @@ pipeline {
     steps {
       script {
       openshift.withCluster() {
-      try {
-      
-      sh """
-        oc new-build . --docker-image=registry.redhat.io/jboss-webserver-3/webserver31-tomcat8-openshift --context-dir='TestShailendra' --name=${APP_NAME} -n ${DEV_NAMESPACE}
-      """
-      
-        }
-      catch (Exception e) {
-      println "Failed to run oc build - ${currentBuild.fullDisplayName}"
-      throw e
+	openshift.withProject(env.DEV_NAMESPACE) {
+
+	openshift.newBuild(".", "--name=${env.APP_NAME}", "--docker-image=registry.redhat.io/jboss-webserver-3/webserver31-tomcat8-openshift", "--context-dir='TestShailendra'")
       }
       }
     }
