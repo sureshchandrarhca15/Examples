@@ -4,6 +4,6 @@
 
 echo "start copy"
 
-cp script/catalina.sh /opt/webserver/bin
+cp /tmp/src/script/catalina.sh /opt/webserver/bin
 
 echo "done copy"
