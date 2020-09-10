@@ -34,7 +34,7 @@ pipeline {
       
       sh """
       cd TestShailendra/
-      mvn test -Dmaven.test.skip=true
+      mvn test -Dmaven.test.skip=true -s settings.xml
       """
       
         }
@@ -51,8 +51,11 @@ pipeline {
       script {  
       try {
       withSonarQubeEnv('sonarqube_7_5') { 
-        sh "mvn -e -B sonar:sonar -Dversion=${env.BUILD_NUMBER}"  
-            }
+        sh """
+	cd TestShailendra/
+	mvn -e -B sonar:sonar -Dversion=${env.BUILD_NUMBER} -s settings.xml
+	"""
+        }
       }
       catch (Exception e) {
       println "Failed to Run Sonar Analysis - ${currentBuild.fullDisplayName}"
